@@ -1,2 +1,2 @@
-# Tech_degree_first_project
+# Tech Degree First Project.
  Random Quote Generator

@@ -16,54 +16,54 @@ project 1 - A Random Quote Generator
 ***/
 let quotes = [
   {
-    quote: '"When you come to the boundaries of what you know, it is time to make some mistakes."',
+    quote: 'When you come to the boundaries of what you know, it is time to make some mistakes.',
     source: '-Robert T. Kiyosaki',
     citation: '-Rich Dad Poor Dad',
     year: 1997
   },
   {
-    quote: '“The way of success is the way of continuous pursuit of knowledge.”',
+    quote: 'The way of success is the way of continuous pursuit of knowledge.',
     source: '-Napoleon Hill ',
     citation: '-Think and Grow Rich',
     year: 1937
   },
   {
-    quote: '"Courage is not the absence of fear, but the triumph over it"',
+    quote: 'Courage is not the absence of fear, but the triumph over it',
     source: '-Nelson Mandela',
     citation: '-Long Walk to Freedom',
     year: 1994
   },
   {
-    quote: '"For I am confident of this very thing, that He who began a good work in you will perfect it until the day of Christ Jesus."',
+    quote: 'For I am confident of this very thing, that He who began a good work in you will perfect it until the day of Christ Jesus.',
     source: '-Appostle Paul',
-    citation: '-Bible: Philippians 1:6',
+    citation: '-Bible: Philippians 1:6'
   },
   {
-    quote: '"When you reach the end of your rope, tie a knot in it and hang on."',
-    source: '-Franklin D. Roosevelt',
+    quote: 'When you reach the end of your rope, tie a knot in it and hang on.',
+    source: '-Franklin D. Roosevelt'
   },
   {
-    quote: '"Tell me and I forget. Teach me and I remember. Involve me and I learn."',
-    source: '-Benjamin Franklin',
+    quote: 'Tell me and I forget. Teach me and I remember. Involve me and I learn.',
+    source: '-Benjamin Franklin'
   },
   {
-    quote: '"Do not go where the path may lead, go instead where there is no path and leave a trail."',
-    source: '-Ralph Waldo Emerson',
+    quote: 'Do not go where the path may lead, go instead where there is no path and leave a trail.',
+    source: '-Ralph Waldo Emerson'
   },
   {
-    quote: '"The greatest glory in living lies not in never falling, but in rising every time we fall."',
-    source: '-Nelson Mandela',
+    quote: 'The greatest glory in living lies not in never falling, but in rising every time we fall.',
+    source: '-Nelson Mandela'
   },
   {
-    quote: '"In the end, it\'s not the years in your life that count. It\'s the life in your years."',
-    source:'-Abraham Lincoln',
+    quote: 'In the end, it\'s not the years in your life that count. It\'s the life in your years.',
+    source:'-Abraham Lincoln'
   },
   {
-    quote: '"If you really look closely, most overnight successes took a long time."',
-    source: '-Steve Jobs',
+    quote: 'If you really look closely, most overnight successes took a long time.',
+    source: '-Steve Jobs'
   },
 ];
-console.log(quotes);
+///console.log(quotes);
 
 
 
@@ -71,8 +71,15 @@ console.log(quotes);
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
+   - Cse the random number to `return` a random quote object from the `quotes` array
 ***/
+
+function getRandomQuote(){
+  let random_number = Math.floor(Math.random() * quotes.length)+ 1;
+  
+  return quotes[random_number];
+}
+/// console.log(getRandomQuote());
 
 
 
@@ -89,6 +96,23 @@ console.log(quotes);
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
+function printQuote(){
+  let random_quote = getRandomQuote();
+  let HTML = '';
+  HTML = '<p class="quote">' + random_quote.quote + '</p>'; 
+  HTML += '<p class="source">' + random_quote.source;
+  if(random_quote.citation){
+    HTML += '<span class="citation">' + random_quote.citation + '</span>';
+  }
+  if(random_quote.year){
+    HTML += '<span class="year">' + random_quote.year + '</span>';
+  }
+  
+  
+  HTML += '</p>';
+  var div =document.getElementById("quote-box");
+  div.innerHTML = HTML;
+}
 
 
 

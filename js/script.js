@@ -88,7 +88,7 @@ let colors = [
 //This function will generates random quote objects from the quotes array
 
 function getRandomQuote(){
-  let random_number = Math.floor(Math.random() * quotes.length)+ 1;
+  let random_number = Math.floor(Math.random() * quotes.length);
   
   return quotes[random_number]; // to return the quotes randomly
 }
@@ -125,7 +125,7 @@ function printQuote(){
 the purpose is to display different colors when the printQuote function is executed.
 ***/
 function randomColor(colors) {
- var col = Math.floor(Math.random() * colors.length) + 1;
+ var col = Math.floor(Math.random() * colors.length);
  document.querySelector("body").style.backgroundColor = colors[col];
 }
 // To display the quotes after 20 seconds

@@ -12,27 +12,27 @@ let quotes = [
     source: 'Robert T. Kiyosaki',
     citation: '-Rich Dad Poor Dad',
     year: 1997,
-    tag: '-Business'
+    tag: ' -Business'
   },
   {
     quote: 'The way of success is the way of continuous pursuit of knowledge.',
     source: 'Napoleon Hill ',
     citation: '-Think and Grow Rich',
     year: 1937,
-    tag: '-Business'
+    tag: ' -Business'
   },
   {
     quote: 'Courage is not the absence of fear, but the triumph over it',
     source: 'Nelson Mandela',
     citation: '-Long Walk to Freedom',
     year: 1994,
-    tag: '-Politics'
+    tag: ' -Politics'
   },
   {
     quote: 'For I am confident of this very thing, that He who began a good work in you will perfect it until the day of Christ Jesus.',
     source: 'Appostle Paul',
     citation: '-Bible: Philippians 1:6',
-    tag: 'Religious'
+    tag: ' -Religious'
   },
   {
     quote: 'When you reach the end of your rope, tie a knot in it and hang on.',
@@ -49,7 +49,7 @@ let quotes = [
   {
     quote: 'The greatest glory in living lies not in never falling, but in rising every time we fall.',
     source: 'Nelson Mandela',
-    tag: '-Politics'
+    tag: ' -Politics'
   },
   {
     quote: 'In the end, it\'s not the years in your life that count. It\'s the life in your years.',
@@ -58,7 +58,7 @@ let quotes = [
   {
     quote: 'If you really look closely, most overnight successes took a long time.',
     source: 'Steve Jobs',
-    tag: '-Business'
+    tag: ' -Business'
   },
 ];
 

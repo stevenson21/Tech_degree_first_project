@@ -1,11 +1,8 @@
 /******************************************
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
-****************************
-
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
-***/
+By Isaac Stevenson
+******************************************/
 
 // creating quote objects in an array
 let quotes = [
@@ -86,10 +83,8 @@ let colors = [
 
 
 //This function will generates random quote objects from the quotes array
-
 function getRandomQuote(){
   let random_number = Math.floor(Math.random() * quotes.length);
-  
   return quotes[random_number]; // to return the quotes randomly
 }
 
@@ -113,7 +108,6 @@ function printQuote(){
   if(random_quote.tag){
     HTML += '<span class="tag">' + random_quote.tag + '</span>';
   }
-  
   HTML += '</p>';
   var div =document.getElementById("quote-box");
   div.innerHTML = HTML;
@@ -128,12 +122,13 @@ function randomColor(colors) {
  var col = Math.floor(Math.random() * colors.length);
  document.querySelector("body").style.backgroundColor = colors[col];
 }
+
 // To display the quotes after 20 seconds
 setInterval(printQuote, 20000);
+
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
   function.
 ***/
-
  let sss = document.getElementById('loadQuote').addEventListener("click", printQuote, false);
